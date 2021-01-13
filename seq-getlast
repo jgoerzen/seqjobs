@@ -2,7 +2,7 @@
 
 set -e
 
-if [ -z "$2" ]; then
+if [ -z "$1" ]; then
     echo "Syntax: $0 seqpath"
     exit 5
 fi
@@ -13,4 +13,4 @@ else
     PREV=0
 fi
 
-NEXT="$(($PREV + 1))"
+printf "%019d\n" "$PREV"
