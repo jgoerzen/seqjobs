@@ -1,6 +1,16 @@
 #!/bin/bash
 
+set -e
+
 if [ -z "$2" ]; then
     echo "Syntax: $0 seqpath"
     exit 5
 fi
+
+if [ -f "$1" ]; then
+    PREV="`cat $1`"
+else
+    PREV=0
+fi
+
+NEXT="$(($PREV + 1))"
