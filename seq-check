@@ -13,4 +13,5 @@ else
     PREV=0
 fi
 
-[ "$PREV" -eq "$2" ]
+[ "$PREV" -ge "$2" ]
+
